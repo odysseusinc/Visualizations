@@ -240,9 +240,10 @@ define(["d3", "d3-selection", "d3-scale"],
 		        UIF: rawData.P90_VALUE[i],
 		      }), rawData);
 		      const values = Object.values(data);
-		      const flattenData = values.reduce((accumulator, currentValue) =>
-		      		accumulator.concat(currentValue)
-		      	);
+		      const flattenData = values.reduce(
+		      	(accumulator, currentValue) => accumulator.concat(currentValue),
+		      	[]
+	      	);
 		      if (!flattenData.length) {
 		        return null;
 		      }
